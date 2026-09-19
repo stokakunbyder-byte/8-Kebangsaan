@@ -2036,6 +2036,66 @@ section{
   }
 }
 </style>
+
+<style>
+/* PENYESUAIAN ANDROID: tampilan lebih lebar tanpa mengubah desktop */
+@media screen and (max-width: 650px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  section {
+    padding-left: 3.5vw !important;
+    padding-right: 3.5vw !important;
+  }
+
+  .hero {
+    padding-left: 3.5vw !important;
+    padding-right: 3.5vw !important;
+  }
+
+  .section-head,
+  .structure-shell,
+  .kontak-grid,
+  .stat-grid,
+  .kegiatan-list,
+  .galeri-grid,
+  .member-grid,
+  .management-grid,
+  .seksi-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .structure-shell {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 11vw, 4rem) !important;
+    line-height: 1.02;
+  }
+
+  .kontak-card,
+  .stat-card,
+  .kegiatan-item,
+  .structure-card,
+  .wali-card-modern,
+  .leadership-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  img, video, iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -2464,9 +2524,9 @@ statObserver.observe(statGrid);
 // ===== KEGIATAN =====
 const kegiatan = [
   {icon:"🇮🇩", title:"Upacara Bendera", desc:"Rutin tiap Senin pagi, wajib rapi dan semangat kebangsaan."},
-  {icon:"🎉", title:"Lomba Lomba Sekolah", desc:"Ikut serta di lomba tingkat sekolah tiap ada lomba."},
+  {icon:"🎉", title:"Lomba Sekolah", desc:"Ikut serta di lomba tingkat sekolah tiap Ada lomba."},
   {icon:"🧹", title:"Rajin Piket", desc:"Bersih-bersih kelas bareng biar nyaman buat belajar."},
-  {icon:"📚", title:"Belajar Kelompok", desc:"Sesi belajar bareng sebelum ulangan biar makin siap."},
+  {icon:"📚", title:"Belajar Kelompok", desc:"Sesi belajar bareng di rumah temen walaupun cuma main ff."},
 ];
 document.getElementById('kegiatanList').innerHTML = kegiatan.map(k => `
   <div class="kegiatan-item">
